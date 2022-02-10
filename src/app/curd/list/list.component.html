@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-primary" [routerLink]="['/creat']">Creat</button>
+<div class="head">
+    <label class="sino">SINO</label>
+    <label class="name">Name</label>
+    <label class="address">Address</label>
+    <label class="email">Mail</label>
+    <label class="state">Country</label>
+    <label class="mobile">Mobile</label>
+    <label class="edit">Edit/view</label>
+</div>
+
+<div *ngFor='let obj of address; index as i'>
+    {{i}}  {{obj.firstName}}{{obj.lastName}}  
+    {{obj.email}} {{obj.mobile}}{{obj.address.country}}{{obj.address.city}}
+    <a class="edit" (click)="onupdate()" [routerLink]="['/edit',obj._id]">Edit</a>
+    <a [routerLink]="['/view',obj._id]">view</a>
+    <a class="delete" (click)="ondelete(obj._id)">delete</a>
+</div>
+
+
+<router-outlet></router-outlet>
+
+

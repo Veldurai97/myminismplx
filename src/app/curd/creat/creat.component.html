@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+        <form [formGroup]="detailsForm">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="firstname">FirstName</label>
+                <input type="text" id="firstname" name="firstname" 
+                formControlName="firstName"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="lastname">LastName</label>
+                <input type="text" id="lastname" name="lastname" 
+                formControlName="lastName"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" 
+                formControlName="email"
+                class="form-control" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="cname">CompanyName</label>
+                <input type="text" id="cname" name="cname" 
+                formControlName="Applicantcompanyname"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="mnumber">Mobile</label>
+                <input type="number" id="mnumber" name="mnumber" 
+                formControlName="mobile"
+                class="form-control" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-lg-6" formGroupName="address">
+            <div class="form-group">
+                <label for="aline1">AddressLine1</label>
+                <input type="text" id="aline1" name="aline1" 
+                formControlName="addressLine1"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="aline2">AddressLine2</label>
+                <input type="text" id="aline2" name="aline2" 
+                formControlName="addressLine2"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" 
+                formControlName="state"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" 
+                formControlName="city"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" 
+                formControlName="country"
+                class="form-control" autocomplete="off">
+            </div>
+
+            <button type="button" class="btn btn-primary" (click)="onsubmit()">Submit</button>
+        </div>
+       </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
