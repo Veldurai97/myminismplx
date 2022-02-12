@@ -32,4 +32,4 @@ export class ViewComponent implements OnInit {
       this.onview()
   }) 
   }
-}
+} 
