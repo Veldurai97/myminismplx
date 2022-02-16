@@ -52,8 +52,7 @@ export class CreatComponent implements OnInit {
       this._bala.updatecurd(this.selectId,this.detailsForm.value).subscribe(repat=>{
         console.log(repat)
         this.router.navigate(['/view',this.selectId])  
-      })
-      
+      }) 
     }
   }
 
